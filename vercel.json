@@ -1,4 +1,23 @@
 {
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
   "redirects": [
     { "source": "/deploy", "destination": "https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FRemiixInc%2Fscreenshot" }
   ]
